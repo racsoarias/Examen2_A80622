@@ -4,7 +4,7 @@
 
 NodoGrafoSocial::NodoGrafoSocial(){
 	persona = NULL;
-	amigos = NULL;
+	amigos = new Lista<INodoGrafoSocial*>();
 }
 
 NodoGrafoSocial::~NodoGrafoSocial(){
@@ -18,9 +18,7 @@ IPersona * NodoGrafoSocial::getPersona(){
 	return this->persona;
 }
 
-void NodoGrafoSocial::agregarAmigo(IPersona * nodo){
-	// no implementar
-}
+void NodoGrafoSocial::agregarAmigo(IPersona * nodo){/*no implementar*/}
 
 ILista<INodoGrafoSocial *> * NodoGrafoSocial::getAmigos(){
 	return this->amigos;

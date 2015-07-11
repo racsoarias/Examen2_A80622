@@ -1,6 +1,8 @@
 #pragma once
 
 #include "INodoGrafoSocial.h"
+#include "NodoGrafoSocial.h"
+#include "Lista.h"
 
 using namespace std;
 

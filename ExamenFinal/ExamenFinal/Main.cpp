@@ -7,7 +7,7 @@
 int _tmain(int argc, _TCHAR* argv[]) {
 
 	srand((unsigned int) time(NULL));
-
+	
 	// Calificador de examen
 	Fabrica * f = new Fabrica();
 	Calificador::calificar(f);

@@ -25,7 +25,7 @@ ILista<IPersona *> * Fabrica::crearListaPersona() {
 }
 
 IGrafoSocial * Fabrica::crearGrafoSocial() {
-	return NULL; //new GrafoSocial();
+	return new GrafoSocial();
 }
 
 void Fabrica::borrarPersona(IPersona * ptr) {

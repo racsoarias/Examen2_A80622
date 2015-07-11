@@ -1,12 +1,20 @@
 #pragma once
 
 #include "IGrafoSocial.h"
+#include "INodoGrafoSocial.h"
+#include "NodoGrafoSocial.h"
+#include "IPersona.h"
+#include "Persona.h"
+#include "Lista.h"
+
 
 using namespace std;
 
-class GrafoSocial : IGrafoSocial{
+class GrafoSocial : public IGrafoSocial{
 
 public:
+	ILista<INodoGrafoSocial *> * todos;
+
 	GrafoSocial();
 	~GrafoSocial();
 

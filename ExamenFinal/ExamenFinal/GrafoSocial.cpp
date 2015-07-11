@@ -8,11 +8,20 @@ GrafoSocial::GrafoSocial(){
 GrafoSocial::~GrafoSocial(){}
 
 void GrafoSocial::aleatorizarGrafo(){
-	for (int i = 0; i < 15; i++){
+	int cant = (rand() % 95 ) + 5;
+	for (int i = 0; i < cant; i++){
 		Persona * p1 = new Persona();
 		p1->setID(i);
 		agregarPersona(p1);
 	}
+	for (int i = 0; i < cant; i++){
+		IPersona * a = getPersonaAleatoria();
+		IPersona * b = getPersonaAleatoria();
+		if (a != b && !sonAmigos(a,b)){
+			establecerAmistad(a, b);
+		}
+	}
+
 }
 
 IPersona * GrafoSocial::getPersonaAleatoria(){
